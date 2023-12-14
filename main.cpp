@@ -23,6 +23,12 @@ public:
         y = s*y;
     }
 
+    void normalize(){
+        float l = length();
+        x = x / l;
+        y = y / l;
+    }
+
 
     void add(vector2 v){
         x = x + v.x;
@@ -42,6 +48,12 @@ public:
         return (x*v.x) + (y*v.y);
     }
 
+    bool equals(vector2 v){
+        if(x == v.x && y == v.y){
+            return true;
+        }
+        return false;
+    }
 };
 
 
